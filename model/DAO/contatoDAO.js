@@ -42,7 +42,8 @@ const selectByNameContato = async function(nomeContato){
 }
 
 const insertContato = async function(contato){
-    let sql = `insert into tbl_contatos (nome, cpf, email) values ('${contato.nome}', '${contato.cpf}', '${contato.email}')`;
+    let sql = `insert into tbl_contatos (nome, celular, foto, email, endereco, cidade) 
+              values ('${contato.nome}', '${contato.celular}', '${contato.foto}', '${contato.email}', '${contato.endereco}', '${contato.cidade}' )`;
 
     //$executeRaw()
     //$executeRawUnsafe()
@@ -55,8 +56,14 @@ const insertContato = async function(contato){
 }
 
 const updateContato = async function(contato){
-    let sql = `update tbl_contatos set nome='${contato.nome}', cpf='${contato.cpf}', email='${contato.email}' 
-    where id = ${contato.id}`;
+    let sql = `update tbl_contatos set 
+        nome='${contato.nome}', 
+        celular='${contato.celular}',
+        foto='${contato.foto}',
+        email='${contato.email}',
+        endereco='${contato.endereco}',
+        cidade='${contato.cidade}'
+        where id = ${contato.id}`;
 
  
     //$executeRaw()

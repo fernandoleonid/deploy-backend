@@ -47,10 +47,7 @@ const getContatosByName = async function(nomeContato){
 //Inserir um novo contato no BD
 const setNewContato = async function(contato){
     //Validação de dados
-    if  (   contato.nome == ''   || contato.nome == undefined ||
-            contato.cpf == ''    || contato.cpf == undefined ||
-            contato.email == ''  || contato.email == undefined 
-        )
+    if  (   contato.nome == ''   || contato.nome == undefined )
         return false;
     else{
         //encaminha os dados para a inserção no BD
@@ -66,8 +63,6 @@ const setNewContato = async function(contato){
 const setUpdateContato = async function(contato, idContato){
     //Validação de dados
     if  (   contato.nome == ''   || contato.nome == undefined ||
-            contato.cpf == ''    || contato.cpf == undefined ||
-            contato.email == ''  || contato.email == undefined ||
             idContato == ''      || idContato == undefined 
         )
         return false;
