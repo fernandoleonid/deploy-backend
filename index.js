@@ -20,7 +20,7 @@
         npm install prisma --save
         npx prisma init
         npm install @prisma/client --save
-
+    yarn && npm install prisma --save && npx prisma db pull && npx prisma generate && npm install @prisma/client --save
 */
 
 //Import das dependências
