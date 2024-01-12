@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tbl_contatos {
+  id    Int    @id @unique(map: "id") @default(autoincrement())
+  nome  String @db.VarChar(80)
+  cpf   String @db.VarChar(18)
+  email String @db.VarChar(255)
+}
